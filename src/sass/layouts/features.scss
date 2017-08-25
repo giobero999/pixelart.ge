@@ -1,0 +1,60 @@
+/* ============== START FEATURES PAGE STYLES ============ */
+#features {
+
+  .page-header {
+    background: url(../imgs/features-bg.jpg) right center no-repeat #000;
+    background-size: auto 300px;
+  }
+  .container {
+		min-height: 640px;
+	}
+
+  .feature-btns {
+    button {
+      background: $white;
+      color: $mainColor;
+      @include padding(9px 30px null);
+      border-radius: 1px;
+      line-height: 19px;
+      border: 1px solid $mainColor;
+      margin:5px;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background: darken($mainColor, 5%);
+        color: $white;
+      }
+    }
+  }
+  .thumbnail-more {
+    text-decoration: none;
+    color: $blackColor;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .thumbnail {
+    border-radius: 1px;
+    //box-shadow: 0px 1px 1px rgba(51, 51, 51, .12);
+    border:1px solid $grey;
+    padding: 2px;
+    background: trasparent;
+    img {
+      height: 300px;
+    }
+    .caption {
+      color: $blackColor;
+      .more {
+        text-align: right;
+        font-family: $mainFont;
+        margin-bottom: 0;
+        button {
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+
+/* ============== END FEATURES PAGE STYLES ============ */

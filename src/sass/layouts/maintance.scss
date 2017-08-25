@@ -1,0 +1,8 @@
+.maintenance {
+  .text {
+    padding-left: 25px;
+    @include respond-to(smallScreen) {
+      padding-left: 0;
+    };
+  }
+}

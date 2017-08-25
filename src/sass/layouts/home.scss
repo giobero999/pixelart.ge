@@ -1,0 +1,370 @@
+#sticker-sticky-wrapper {
+  position: relative;
+  z-index: 222;
+}
+
+header#sticker {
+  .navbar-default {
+    z-index: 10 !important;
+    background: $mainColor;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.6);
+    height: 60px;
+    color: white;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  /* mobile styles for menu */
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background: $mainColor;
+    border:none !important;
+    box-shadow: none;
+  }
+
+  .navbar-default .navbar-toggle {
+    border:none;
+    &:hover {
+      color: $blue;
+      background: none !important;
+    }
+    .menu-bars {
+      font-size: 20px;
+      padding-top: 3px;
+      border: none;
+    }
+  }
+  .navbar-toggle {
+      background: none !important;
+  }
+
+  .navbar-brand {
+    margin-top: -6px;
+    img {
+      height: 43px;
+    }
+  }
+  /* =========  end mobile styles for menu ============*/
+
+  .navbar-nav {
+    li {
+      vertical-align: baseline;
+      a {
+        margin: 7px 5px 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: 300;
+        color: white;
+        font-size: 15px;
+        @include respond-to(largeScreen) {
+          font-size: 14px;
+          padding: 15px 0px;
+        }
+        @include respond-to(mediumScreen) {
+          font-size: 11px;
+          padding: 15px 0px;
+        }
+        &:hover {
+          color: $blue;
+        }
+        &:focus{
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* ========START HOME STYLES======= */
+#home {
+  .slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $mainColor;
+    z-index: 1;
+    background-size: cover;
+    img {
+      width: 100%;
+      opacity: .5;
+    }
+    .slider-text {
+      position: absolute;
+      z-index: 1;
+      width: 70%;
+      text-align: center;
+      color: $white;
+      @include respond-to(mediumScreen) {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      h1 {
+        letter-spacing: 5px;
+        font-size: 70px;
+        font-family: $englishFont;
+        display: inline-block !important;
+        text-transform: uppercase;
+        opacity: 1;
+        text-shadow: 0 1px 3px lighten($black, 30%);
+        @include respond-to(smallScreen) {
+          font-size: 50px;
+        }
+      }
+      & > span {
+        @extend h1;
+        font-size: 58px;
+        vertical-align: top;
+        @include respond-to(smallScreen) {
+          font-size: 42px;
+        }
+      }
+      h4 {
+        opacity: 1;
+        letter-spacing: 1px;
+        display: block;
+        font-size: 28px;
+        font-weight: lighter;
+        @include respond-to(smallScreen) {
+          font-size: 18px;
+        }
+      }
+      p {
+        opacity: .9;
+        @include respond-to(smallScreen) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/* ========END HOME STYLES======= */
+
+
+/* ========START WHAT-WE-DO STYLES======= */
+#what-we-do {
+  padding: 20px 0 40px;
+  //background:url('../imgs/patterns/cubes.png') repeat;
+  height: auto;
+  width: 100%;
+  color: $blackColor;
+  .main-text {
+    padding:0 50px 20px;
+    @include respond-to(mediumScreen){
+      padding: 0 0 20px;
+    };
+  }
+  .what-we-do {
+    .service {
+      position: relative;
+      background: $black;
+      border-radius: 1px;
+      overflow: hidden;
+      @include respond-to(mediumScreen){
+        margin-bottom: 20px;
+      };
+      &:hover > img {
+        transition-delay: .2s;
+        @include filter(blur(2px));
+      }
+
+      &:hover  .caption {
+        height: 100%;
+        background: rgba(20, 36, 59, 0.7) url('../imgs/patterns/pixels.png') repeat;
+      }
+      &:hover .caption > .service-desc > .description{
+        opacity: 1;
+        box-shadow: none;
+      }
+      &:hover .lear-more {
+        right: 0;
+      }
+      > img {
+        width: 100%;
+        opacity: 1;
+        @include filter(blur(0px));
+      }
+      .caption {
+        @include position(absolute, null 0 0 0);
+        padding: 0 15px 10px;
+        height: 50px;
+        transition: all .2s ease-in-out;
+        background: rgba(20, 36, 59, 0.55);
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.52);
+        .service-desc {
+          color: $white;
+          img {
+            width: 20px;
+            vertical-align:sub;
+            margin-right: 5px;
+            display: inline-block;
+          }
+          h3 {
+            display: inline-block;
+            font-size: 13px;
+            margin-top: 18px;
+            font-family: $mainFont;
+            @include respond-to(mediumScreen){
+              font-size: 11px;
+              margin-top: 20px;
+            };
+          }
+          .description {
+            opacity: 0;
+            padding-left: 29px;
+            transition: opacity .3s ease-in-out;
+            font-size: 13px;
+            @include respond-to(mediumScreen){
+              height: auto;
+            };
+          }
+        }
+      }
+      button.lear-more {
+        position: absolute;
+        background: $red;
+        right: -110px;
+        bottom: 0;
+        border-radius: 0px;
+        border: none;
+        padding: 6px 5px 3px;
+        margin:5px;
+        transition: all .2s ease-in-out;
+        @include respond-to(mediumScreen){
+          right: 0;
+        };
+        &:hover {
+          background: $white;
+        }
+        &:hover > a{
+          color: $red;
+        }
+        a {
+          transition: all .3s ease-in-out;
+          color: $white;
+          @include padding(10px 5px 6px);
+          font-size: 12px;
+          font-family: $mainFont;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+/* ========END WHAT-WE-DO STYLES======= */
+
+
+/* ========START WHO-WE-ARE STYLES======= */
+
+#who-we-are {
+  background: $red;
+  padding: 20px 0 40px;
+  color: $white;
+  .about-text {
+    color: $white;
+    font-size: 15px;
+  }
+}
+
+/* ========END WHO-WE-ARE STYLES======= */
+
+
+/* ========START LEARNING-MATERIALS STYLES======= */
+
+#learning-materials {
+  padding: 20px 0 40px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  .title {
+    color: $blackColor;
+  }
+  #learning-items {
+    .item {
+      .img-div {
+        background-color: $black;
+        border-radius: 2px;
+        img {
+          border-radius: inherit;
+          width: 100%;
+          opacity: .9;
+        }
+      }
+      .text-div {
+        h3, p {
+          color: $blackColor;
+        }
+        a {
+          float: right;
+          display: inline-block;
+          margin-right: 10px;
+          color: $blue;
+          transition: all .2s ease-in-out;
+          cursor: pointer;
+          text-decoration: none;
+          &::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              border-radius: 30px;
+              background: $red;
+              transition: width .3s;
+          }
+          &:hover {
+            color: $red;
+            transition-duration: .3s;
+          }
+          &:hover + .img-div{
+            opacity: 1;
+            display: none;
+          }
+          &:hover::after {
+            width: 99%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ========END LEARNING-MATERIALS STYLES======= */
+
+
+/* ========START PARTNERS STYLES======= */
+
+#partners {
+  padding: 20px 0 100px;
+  width: 100%;
+  .title {
+    color: $blackColor;
+  }
+  .header {
+    h3 {
+      color: $white;
+    }
+    p {
+      color: $blackColor;
+      font-size: 15px;
+      height: 80px;
+      @include respond-to(mediumScreen){
+        height: auto;
+      };
+
+    }
+    a {
+      .more-button {
+        width: 30px;
+        float: right;
+      }
+    }
+  }
+  .owl-item {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ========END PARTNERS STYLES======= */

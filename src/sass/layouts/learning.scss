@@ -1,0 +1,49 @@
+#learning {
+  .page-header {
+    background:#000 url("../imgs/learning-bg.jpg") no-repeat center top;
+    background-size: cover;
+  }
+  .container {
+    min-height: 640px;
+    .row {
+      margin-bottom: 20px;
+    }
+    .single-blog {
+      .img-div {
+        img {
+          border-radius: 2px;
+        }
+      }
+      /* .text-div {
+        background: $blue;
+        height: inherit;
+        padding: 13px;
+        margin-top: 0;
+        margin: 0px -30px;
+        color: white;
+      } */
+      .learn-more {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: $white;
+        a {
+          font-size: 20px;
+          padding: 84px 0px;
+          vertical-align: middle;
+          color: $white;
+          background: $red;
+          text-decoration: none;
+          transition: all .3s ease-in-out;
+          @include respond-to(largeScreen){
+            padding: 65px 0px;
+          }
+          &:hover {
+            background: $yellow;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+#contact {
+  .page-header {
+    background:#000;
+    background-size: cover;
+    height: 400px;
+  }
+  .container {
+    min-height: 520px;
+  }
+  #map {
+    height: 400px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .address {
+    list-style: none;
+    padding-left: 2px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  .send-mail {
+    input, textarea, button {
+      border-radius: 1px;
+    }
+    label {
+      font-size: 13px;
+    }
+    input, textarea {
+      border: 1px solid lighten($grey, 4%);
+      box-shadow: none;
+      transition: all .2s ease-in-out;
+      &:focus {
+        box-shadow: 0 0px 8px #e2e2e2;
+      }
+    }
+    button {
+      background: $green;
+      border-color: $green;
+      @include padding(null 25px);
+    }
+  }
+}

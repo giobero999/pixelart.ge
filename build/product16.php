@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <?php include("common/head.php") ?>
+  </head>
+  <body>
+    <div class="wrapper">
+      <?php include("common/nav.php") ?>
+      <div class="content" id="products">
+        <div class="page-header mb0">
+          <div class="title">
+
+          </div>
+        </div>
+        <div class="container white-bg">
+          <div class="pt40">
+            <div class="row ">
+              <div class="col-sm-12 col-md-6">
+                <img src="imgs/products/16.jpg" alt="" class="img-responsive"/>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h3 class="main-title">Xtreme™ გარე ორ-ეკრანიანი ციფრული მენიუ (კიოსკი) ორი 47 ინჩიანი ეკრანისთვის</h3>
+                <h4 i>მწარმოებელი: Peerless-AV</i>
+                <hr>
+                <div class="pull-right">
+                  <?php
+                    include ("common/request.php")
+                  ?>
+                </div>
+              </div>
+            </div>
+            <hr class="center-block" width="90%">
+            <div class="description-full pb40">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- <h4>აღწერა</h4> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php include("common/footer.php") ?>
+    </div>
+  </body>
+</html>

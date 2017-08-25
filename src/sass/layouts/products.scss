@@ -1,0 +1,29 @@
+#products {
+  .page-header {
+    background:#000 url("../imgs/home.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .brand {
+    @include position(absolute, -43px 0px null inherit);
+    background: $red;
+    @include padding(10px 15px);
+    font-size: 16px;
+    i {
+      font-size: 14px;
+      padding-right: 5px;
+      color: darken($white, 10%);
+    }
+    @include respond-to(mediumScreen) {
+      display: none;
+    }
+  }
+  .features-list {
+    padding-left: 30px;
+    li {
+      padding-bottom: 10px;
+    }
+  }
+
+
+}
